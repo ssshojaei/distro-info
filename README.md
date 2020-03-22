@@ -46,7 +46,12 @@
     //    cursor: 'deepin',
     //    shell: 'mojave-dark-solid'
     //  }
+**Cpu information:**
 
+    console.log(distro.cpu())
+    // {Architecture: 'x86_64' , ...}
+    
+    
 **only one case:**
 
     console.log(distro.theme().gtk)
