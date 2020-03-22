@@ -1,6 +1,6 @@
 {
 	"name": "distro-info",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Simple Package For Get Distribution Information",
 	"homepage": "https://github.com/ssshojaei/distro-info",
 	"main": "index.js",
