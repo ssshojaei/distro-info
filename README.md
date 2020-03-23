@@ -1,6 +1,8 @@
-## simple package for get distribution information
 
-### install
+# Distro Information in JS
+Getting some informations of your Gnu/Linux Distro
+
+## Installing
 
 **with npm**
 
@@ -10,7 +12,7 @@
 
     yarn add distro-info
 
-### usage
+## usage
 
 **require / import**
 
@@ -22,7 +24,7 @@
     import { name } from 'distro-info'
     console.log(name)
 
-### Available Methods
+## Available Methods
 
 **name:**
 
