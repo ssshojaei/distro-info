@@ -1,16 +1,16 @@
 
 # Distro Information in JS
-Getting some informations of your Gnu/Linux Distro
+Getting some informations of your Gnu/Linux Distro. You can import the index.js file in your project:).
 
 ## Installing
 
 **with npm**
 
-    npm i distro-info
+    npm i distro-info //old version
 
 **with yarn**
 
-    yarn add distro-info
+    yarn add distro-info // old version
 
 ## usage
 
