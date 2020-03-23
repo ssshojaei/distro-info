@@ -40,11 +40,14 @@
 
     console.log(distro.theme())
     //  {
-    //    gtk: 'sierra-dark',
+    //    background : {    
+	//		currentBackground : 'file://......'
+	//	},
+    //    gtk: {...},
     //    icon: 'mcmojave-circle',
-    //    font: 'ubvazir 10',
+    //    font: {...},
     //    cursor: 'deepin',
-    //    shell: 'mojave-dark-solid'
+    //    shell: {...}
     //  }
 **Cpu information:**
 

@@ -26,18 +26,30 @@ const version = () => {
 			return 0;
 	}
 };
-
 const theme = () => {
 	const clean = (value) => {
 		const res = shell.exec(value, { silent: true }).stdout;
 		return res.replace(/'/g, '').trim().toLocaleLowerCase();
 	};
 	return {
-		gtk    : clean('gsettings get org.gnome.desktop.interface gtk-theme'),
-		icon   : clean('gsettings get org.gnome.desktop.interface icon-theme'),
-		font   : clean('gsettings get org.gnome.desktop.interface font-name'),
-		cursor : clean('gsettings get org.gnome.desktop.interface cursor-theme'),
-		shell  : clean('gsettings get org.gnome.shell.extensions.user-theme name')
+		background : {
+			currentBackground : clean('gsettings get org.gnome.desktop.background picture-uri')
+		},
+		gtk        : {
+			theme        : clean('gsettings get org.gnome.desktop.interface gtk-theme'),
+			colorPalette : clean('gsettings get org.gnome.desktop.interface gtk-color-palette')
+		},
+		icon       : clean('gsettings get org.gnome.desktop.interface icon-theme'),
+		fonts      : {
+			font          : clean('gsettings get org.gnome.desktop.interface font-name'),
+			monospaceFont : clean('gsettings get org.gnome.desktop.interface monospace-font-name'),
+			docFont       : clean('gsettings get org.gnome.desktop.interface document-font-name')
+		},
+		cursor     : clean('gsettings get org.gnome.desktop.interface cursor-theme'),
+		shell      : {
+			name              : clean('gsettings get org.gnome.shell.extensions.user-theme name'),
+			enabledExtensions : clean('gsettings get org.gnome.shell enabled-extensions')
+		}
 	};
 };
 const cpu = () => {
