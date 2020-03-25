@@ -1,28 +1,36 @@
+# Distro-Info
 
-# Distro Information in JS
-Getting some informations of your Gnu/Linux Distro. You can import the index.js file in your project:).
+Simple package for getting some information about distro and desktop environment
 
 ## Installing
 
 **with npm**
 
-    npm i distro-info //old version
+    npm i distro-info
 
 **with yarn**
 
-    yarn add distro-info // old version
+    yarn add distro-info
 
 ## usage
 
 **require / import**
 
-    // CommonJS
-    const distro = require('distro-info')
-    console.log(distro.name())
+CommonJS
 
-    // ES6
+    const distro = require('distro-info')
+    // const { name, desktop } = require('distro-info')
+
+    console.log(distro.name())
+    // console.log(name());
+
+ES6
+
     import { name } from 'distro-info'
-    console.log(name)
+    // import distro from 'distro-info'
+
+    console.log(name())
+    // console.log(distro.name())
 
 ## Available Methods
 
@@ -36,27 +44,35 @@ Getting some informations of your Gnu/Linux Distro. You can import the index.js 
 
 **version:** (DE version)
 
-    console.log(distro.desktop()) //3.36.0
+    console.log(distro.version()) //3.36.0
 
 **theme:**
 
     console.log(distro.theme())
-    //  {
-    //    background : {    
-	//		currentBackground : 'file://......'
-	//	},
-    //    gtk: {...},
-    //    icon: 'mcmojave-circle',
-    //    font: {...},
-    //    cursor: 'deepin',
-    //    shell: {...}
-    //  }
-**Cpu information:**
+    {
+        background: {
+            currentBackground:  'file:///home/saleh/bg.jpg'
+        },
+        gtk: {
+            theme:  'sierra-dark',
+            colorPalette: [
+                'black:white:gray50:red:purple:blue:light',
+                ...
+            ]
+        },
+        icon:  'mcmojave-circle',
+        fonts: {
+            font:  'ubvazir 10',
+            monospaceFont:  'vazir code fd 10',
+            docFont:  'ubvazir 11'
+        },
+        cursor:  'deepin',
+        shell: {
+            name:  'mojave-dark-solid',
+            enabledExtensions:  '[gtile@vibou, ...]'
+        }
+    }
 
-    console.log(distro.cpu())
-    // {Architecture: 'x86_64' , ...}
-    
-    
 **only one case:**
 
-    console.log(distro.theme().gtk)
+    console.log(distro.theme().gtk.theme) //sierra-dark
