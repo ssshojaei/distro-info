@@ -1,16 +1,18 @@
-## simple package for get distribution information
 
-### install
+# Distro Information in JS
+Getting some informations of your Gnu/Linux Distro. You can import the index.js file in your project:).
+
+## Installing
 
 **with npm**
 
-    npm i distro-info
+    npm i distro-info //old version
 
 **with yarn**
 
-    yarn add distro-info
+    yarn add distro-info // old version
 
-### usage
+## usage
 
 **require / import**
 
@@ -22,7 +24,7 @@
     import { name } from 'distro-info'
     console.log(name)
 
-### Available Methods
+## Available Methods
 
 **name:**
 
@@ -40,13 +42,21 @@
 
     console.log(distro.theme())
     //  {
-    //    gtk: 'sierra-dark',
+    //    background : {    
+	//		currentBackground : 'file://......'
+	//	},
+    //    gtk: {...},
     //    icon: 'mcmojave-circle',
-    //    font: 'ubvazir 10',
+    //    font: {...},
     //    cursor: 'deepin',
-    //    shell: 'mojave-dark-solid'
+    //    shell: {...}
     //  }
+**Cpu information:**
 
+    console.log(distro.cpu())
+    // {Architecture: 'x86_64' , ...}
+    
+    
 **only one case:**
 
     console.log(distro.theme().gtk)
