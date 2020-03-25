@@ -1,16 +1,16 @@
 
 # Distro Information in JS
-Getting some informations of your Gnu/Linux Distro. You can import the index.js file in your project:).
+Getting some informations of your Gnu/Linux Distro
 
 ## Installing
 
 **with npm**
 
-    npm i distro-info //old version
+    npm i distro-info
 
 **with yarn**
 
-    yarn add distro-info // old version
+    yarn add distro-info
 
 ## usage
 
@@ -40,17 +40,10 @@ Getting some informations of your Gnu/Linux Distro. You can import the index.js 
 
 **theme:**
 
-    console.log(distro.theme())
-    //  {
-    //    background : {    
-	//		currentBackground : 'file://......'
-	//	},
-    //    gtk: {...},
-    //    icon: 'mcmojave-circle',
-    //    font: {...},
-    //    cursor: 'deepin',
-    //    shell: {...}
-    //  }
+    console.log(distro.theme.background.currentBackground())    
+	//	'file://......'
+	console.log(distro.theme.fonts.docFont())    
+	//	'ubuntu mono 11'
 **Cpu information:**
 
     console.log(distro.cpu())
@@ -60,3 +53,7 @@ Getting some informations of your Gnu/Linux Distro. You can import the index.js 
 **only one case:**
 
     console.log(distro.theme().gtk)
+# Contributors
+Thanks for contributing.
+<a href='github.com/ssshojaei'>Ordinary Saleh</a> Creator
+<a href='github.com/Aslemammad'>AsleMammad</a>
