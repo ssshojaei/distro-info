@@ -1,29 +1,32 @@
-const shell = require('shelljs');
-console.log();
+const shell = require('shelljs')
+
 const name = () => {
-	const res = shell.exec('lsb_release -i', { silent: true }).stdout;
-	return res.split(':')[1].toLocaleLowerCase().trim();
-};
+	const res = shell.exec('lsb_release -i', { silent: true }).stdout
+	return res
+		.split(':')[1]
+		.toLowerCase()
+		.trim()
+}
 
 const desktop = () => {
-	const res = shell.exec('echo $XDG_CURRENT_DESKTOP', { silent: true }).stdout;
-	return res.trim().toLocaleLowerCase();
-};
+	const res = shell.exec('echo $XDG_CURRENT_DESKTOP', { silent: true }).stdout
+	return res.trim().toLowerCase()
+}
 
 const version = () => {
-	let res;
+	let res
 	switch (desktop()) {
 		case 'gnome':
-			res = shell.exec('gnome-shell --version', { silent: true }).stdout;
-			return parseFloat(res.replace(/[^\d\.]*/g, ''));
+			res = shell.exec('gnome-shell --version', { silent: true }).stdout
+			return parseFloat(res.replace(/[^\d\.]*/g, ''))
 		case 'xfce':
-			res = shell.exec('xfce4-panel --version', { silent: true }).stdout;
-			return parseFloat(res.replace(/[^\d\.]*/g, ''));
+			res = shell.exec('xfce4-panel --version', { silent: true }).stdout
+			return parseFloat(res.replace(/[^\d\.]*/g, ''))
 		case 'kde':
-			res = shell.exec('plasmashell --version', { silent: true }).stdout;
-			return parseFloat(res.replace(/[^\d\.]*/g, ''));
+			res = shell.exec('plasmashell --version', { silent: true }).stdout
+			return parseFloat(res.replace(/[^\d\.]*/g, ''))
 		default:
-			return 0;
+			return 0 //not found
 	}
 };
 const clean = (value) => {
@@ -78,4 +81,5 @@ const cpu = () => {
 	return information;
 };
 
-module.exports = { name, desktop, version, theme, cpu };
+
+module.exports = { name, desktop, version, theme }

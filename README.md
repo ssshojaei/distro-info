@@ -1,6 +1,6 @@
+# Distro-Info
 
-# Distro Information in JS
-Getting some informations of your Gnu/Linux Distro
+Simple package for getting some information about distro and desktop environment
 
 ## Installing
 
@@ -16,13 +16,21 @@ Getting some informations of your Gnu/Linux Distro
 
 **require / import**
 
-    // CommonJS
-    const distro = require('distro-info')
-    console.log(distro.name())
+CommonJS
 
-    // ES6
+    const distro = require('distro-info')
+    // const { name, desktop } = require('distro-info')
+
+    console.log(distro.name())
+    // console.log(name());
+
+ES6
+
     import { name } from 'distro-info'
-    console.log(name)
+    // import distro from 'distro-info'
+
+    console.log(name())
+    // console.log(distro.name())
 
 ## Available Methods
 
@@ -36,7 +44,7 @@ Getting some informations of your Gnu/Linux Distro
 
 **version:** (DE version)
 
-    console.log(distro.desktop()) //3.36.0
+    console.log(distro.version()) //3.36.0
 
 **theme:**
 
@@ -49,10 +57,7 @@ Getting some informations of your Gnu/Linux Distro
     console.log(distro.cpu())
     // {Architecture: 'x86_64' , ...}
     
-    
-**only one case:**
 
-    console.log(distro.theme().gtk)
 # Contributors
 Thanks for contributing.
 <a href='github.com/ssshojaei'>Ordinary Saleh</a> Creator
