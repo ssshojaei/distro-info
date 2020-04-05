@@ -16,7 +16,6 @@
 	"author": "OrdinarySaleh",
 	"license": "GPL-3.0-or-later",
 	"dependencies": {
-		"distro-info": "^1.0.1",
 		"shelljs": "^0.8.3"
 	}
 }
