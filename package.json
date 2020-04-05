@@ -1,6 +1,6 @@
 {
 	"name": "distro-info",
-	"version": "1.0.1",
+	"version": "2.0.0",
 	"description": "Simple Package For Get Distribution Information",
 	"homepage": "https://github.com/ssshojaei/distro-info",
 	"main": "index.js",
@@ -16,6 +16,7 @@
 	"author": "OrdinarySaleh",
 	"license": "GPL-3.0-or-later",
 	"dependencies": {
+		"distro-info": "^1.0.1",
 		"shelljs": "^0.8.3"
 	}
 }
